@@ -1,4 +1,4 @@
-package ARRAY;
+package ARRAY.Basics;
 
 import java.util.Arrays;
 

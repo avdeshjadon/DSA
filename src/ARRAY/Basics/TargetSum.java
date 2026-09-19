@@ -1,6 +1,4 @@
-package ARRAY;
-
-import java.util.Arrays;
+package ARRAY.Basics;
 
 public class TargetSum {
 

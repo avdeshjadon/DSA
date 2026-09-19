@@ -1,4 +1,4 @@
-package ARRAY;
+package ARRAY.Basics;
 
 public class RoughBook {
 

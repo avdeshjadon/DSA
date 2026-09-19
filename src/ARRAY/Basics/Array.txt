@@ -50,3 +50,19 @@ Timestamps:
 55:43 - Dry run
 1:01:20 - Summary of lecture
 https://www.youtube.com/watch?v=Au9CAdI_Ihc
+
+
+TIME STAMPS-
+00:00 - Educator introduction
+1:22 - Recap
+2:02 - Today's checklist
+2:37 - Basic Terminology for coding
+5:36 - Q1.Swap using temporary variable
+11:36 - Q2.Swap using sum and difference
+18:26 - Q3.Reverse an array
+40:07 - Q4.Rotate the array by 'k' steps
+51:14 - Q5. Rotate the array by 'k' steps without  extra space
+1:02:43 - Q5.check if number is present in array or not
+1:17:00 - Summary and next lecture
+1:18:19 - Thankyou
+https://www.youtube.com/watch?v=ODBaRTfZsDg
