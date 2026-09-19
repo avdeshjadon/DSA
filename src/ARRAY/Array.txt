@@ -20,7 +20,7 @@ Timestamps:
 00:22 - Recap of the previous lecture
 11:32 - Taking array input in Java
 14:53 - Array definition
-34:47 - Cloning an array
+34:47 - Cloning an array(tell me about copyof, copyofrange  etc also in detail )
 40:17 - Program to count the number of occurrences of element x in a given array
 44:25 - Dry run of code
 47:05 - Program to find the last occurrence of element x in a given array
@@ -30,3 +30,23 @@ Timestamps:
 1:12:28 - Relevant information about static methods
 1:14:00 - Summary of lecture
 https://www.youtube.com/watch?v=FBGJ4m3OpZE&t=2437s
+
+
+Timestamps:
+00:00 - Introduction
+00:45 - Recap
+02:08 - Today's Checklist
+03:52 - Program to find the total number of pairs in the arrays whose sum is equal to the given value x
+11:00 - Program to count the number of triplets whose sum is equal to the given value x
+15:15 - Code
+17:22 - Dry run
+27:14 - Program to find a unique number in a given array
+31:35 - Code
+34:20 - Program to find the second-largest element in the given array
+39:02 - code
+45:44 - Dry run
+49:10 - For an array of integers return the first value that is repeating in the array
+52:25 - Code
+55:43 - Dry run
+1:01:20 - Summary of lecture
+https://www.youtube.com/watch?v=Au9CAdI_Ihc
