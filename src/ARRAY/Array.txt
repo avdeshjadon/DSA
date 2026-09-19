@@ -1,0 +1,32 @@
+Timestamps:
+00:00 -  Introduction
+00:55 -  Recap of the previous lecture
+05:33 -  What is an array
+08:28 -  Representation of an array
+10:21 -  Syntax of array declaration
+12:48 -  Memory allocation in array
+21:07 -  Accessing the elements in single dimensional array
+27:35 -  Types of arrays
+31:12 -  Initializing and accessing elements in 2-D array
+42:13 -  Length operation in arrays
+43:19 -  Traversing through the array
+54:08 -  Practice problems
+01:11:55 - Summary
+https://www.youtube.com/watch?v=YsBUVLGAS5g&list=PLxgZQoSe9cg00xyG5gzb5BMkOClkch7Gr&index=18&t=3891s
+
+
+Timestamps:
+00:00 - Introduction
+00:22 - Recap of the previous lecture
+11:32 - Taking array input in Java
+14:53 - Array definition
+34:47 - Cloning an array
+40:17 - Program to count the number of occurrences of element x in a given array
+44:25 - Dry run of code
+47:05 - Program to find the last occurrence of element x in a given array
+53:53 - Program to count the number of elements strictly greater than a value x
+54:57 - Program to check if an array is sorted or not
+1:05:13 - Bonus question
+1:12:28 - Relevant information about static methods
+1:14:00 - Summary of lecture
+https://www.youtube.com/watch?v=FBGJ4m3OpZE&t=2437s
