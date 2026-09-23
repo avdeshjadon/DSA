@@ -16,16 +16,16 @@ Simple definition: switch matches a value against several possible cases and run
 ║            │case 1 matched?│             ║
 ║            └───────────────┘             ║
 ║                    ▼                     ║
-║    yes                               no  ║
-║   ▼                                    ▼ ║
+║        yes                    not        ║
+║         ▼                      ▼         ║
 ║   ┌────────────────┐  ┌───────────────┐  ║
 ║   │Run case 1 block│  │case 2 matched?│  ║
 ║   └────────────────┘  └───────────────┘  ║
 ║            │case 2 matched?│             ║
 ║            └───────────────┘             ║
 ║                    ▼                     ║
-║    yes                               no  ║
-║   ▼                                    ▼ ║
+║       yes                     not        ║
+║        ▼                       ▼         ║
 ║    ┌────────────────┐  ┌─────────────┐   ║
 ║    │Run case 2 block│  │default block│   ║
 ║    └────────────────┘  └─────────────┘   ║

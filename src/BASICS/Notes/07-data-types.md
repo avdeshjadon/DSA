@@ -19,7 +19,7 @@ int age = 20;
 1. Primitive data types
    These are the basic building blocks. They store a single value directly.
 
-2. Reference types
+2. Reference types ( Non Primitive data )
    These types hold the address (location) of an object, not the object itself.
 
 ## Primitive Data Types
@@ -69,7 +69,7 @@ boolean isNegative = false;
 
 Only two possible values: true and false.
 
-## Reference Types
+## Reference Types ( Non Primitive )
 
 A reference type points to a location in memory where an object lives.
 

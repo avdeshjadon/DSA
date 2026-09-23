@@ -1,4 +1,4 @@
-# Java Architecture: JVM, JRE, JDK
+ # Java Architecture: JVM, JRE, JDK
 
 This file explains the three most important pieces of Java in simple language. These three names confuse almost every beginner, so read slowly.
 
@@ -160,6 +160,88 @@ JDK  =  JVM  +  core libraries  +  development tools
 ║ └──────────────────────────────────────┘ ║
 ╚══════════════════════════════════════════╝
 ```
+
+## Is Java Compiled or Interpreted?
+
+The Programming Fundamentals file said: "C, C++, Java (Java uses a mix, explained in the Java architecture file)." Here is that explanation.
+
+Everyone asks this question, and the answer is: **Java is both compiled AND interpreted.** It is a hybrid. Here is the three-stage story.
+
+```text
+╔═══════════════════════════════════════════════════════════════════╗
+║              JAVA - THE TWO-STEP JOURNEY                          ║
+╠═══════════════════════════════════════════════════════════════════╣
+║                                                                   ║
+║  STEP 1 - COMPILED                                               ║
+║  ┌────────────────────────────────────────────────────┐           ║
+║  │ You write Hello.java                                │           ║
+║  └────────────────────────────────────────────────────┘           ║
+║                          ▼                            (once)      ║
+║  ┌────────────────────────────────────────────────────┐           ║
+║  │ javac compiles the WHOLE file at once              │           ║
+║  └────────────────────────────────────────────────────┘           ║
+║                          ▼                                        ║
+║  ┌────────────────────────────────────────────────────┐           ║
+║  │ Bytecode Hello.class (not machine code!)           │           ║
+║  └────────────────────────────────────────────────────┘           ║
+║                                                                   ║
+║  STEP 2 - INTERPRETED BY THE JVM                                 ║
+║  ┌────────────────────────────────────────────────────┐           ║
+║  │ Every system's JVM reads the bytecode              │           ║
+║  │ and converts it to machine instructions             │           ║
+║  │ (line by line, at run time)                         │           ║
+║  └────────────────────────────────────────────────────┘           ║
+║                          ▼                                        ║
+║  ┌────────────────────────────────────────────────────┐           ║
+║  │ Program output                                    │           ║
+║  └────────────────────────────────────────────────────┘           ║
+║                                                                   ║
+╚═══════════════════════════════════════════════════════════════════╝
+```
+
+### Why it is a "mix"
+
+| Question | Answer |
+| --- | --- |
+| Is Java compiled? | Yes. `javac` converts the whole `.java` source into bytecode (`.class`) before anything runs. This is a compiler's job. |
+| Is Java interpreted? | Yes. The JVM does not understand source code or bytecode as machine instructions. It reads the bytecode at run time and converts it to machine instructions. This is an interpreter's job. |
+| So what is bytecode? | The middle step. It is NOT machine code (like C produces) and it is NOT source code. It is a half-way language that a JVM can read. |
+| Why do this? | Bytecode is the same on every system, so the same `.class` file runs anywhere that has a JVM. That is what makes Java platform independent. |
+
+### The fast version of the same story (JIT)
+
+There is one more layer many interviews ask about, called the **JIT compiler** (Just-In-Time).
+
+- The JVM is a software interpreter, and plain interpreters can be slow.
+- To fix this, the JVM watches which bytecode runs again and again.
+- The JIT compiler (a part of the JVM) takes those frequently used parts of bytecode and compiles them into real machine code once, while the program runs.
+- From then on, that part runs like native machine code - much faster, and repeatedly.
+
+So the full honest answer is:
+
+```
+Java compiles to bytecode (compiled),
+the JVM interprets bytecode at first (interpreted),
+and then the JIT compiler improves hot code into machine code (compiled again, at run time).
+```
+
+### Compare with C and Python
+
+| | C / C++ | Python | Java |
+| --- | --- | --- | --- |
+| Compile to machine code | Yes, directly | No | No, only to bytecode |
+| Interpreted at run time | No | Yes | Yes (by the JVM) |
+| Kind | Compiled only | Interpreted only | Hybrid (compiled + interpreted) |
+| Output of compile step | Machine code (.exe/.out) | None | Bytecode (.class) |
+| Portability | Machine-code file runs only on one OS | Source runs anywhere with Python | Bytecode runs anywhere with a JVM |
+
+### Easy interview explanation
+
+If an interviewer asks "Is Java compiled or interpreted?", say this:
+
+"Java is both. First `javac` compiles the whole source file into bytecode, which is a .class file. Then the JVM interprets that bytecode and turns it into machine instructions at run time. To make it faster, a part of the JVM called the JIT compiler compiles the frequently used parts of bytecode into native machine code while the program is running. So Java starts as compiled, runs as interpreted, and finishes with JIT compilation."
+
+Keep it as three short sentences: compiled to bytecode, interpreted by the JVM, then JIT speeds it up.
 
 ## Easy Interview Explanation
 

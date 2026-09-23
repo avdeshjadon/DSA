@@ -1,26 +1,16 @@
 package ARRAY.Basics;
 
 public class RoughBook {
+    public static void main(String[] args) {
+        System.out.println("Total arguments: " + args.length);
 
-    public static int lastOccurence(int[] arr, int num) {
-        int count = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == num) {
-                count = i;
-            }
+        for (int i = 0; i < args.length; i++) {
+            System.out.println("args[" + i + "] = " + args[i]);
         }
 
-        return count;
-
-    }
-
-    public static void main(String[] args) {
-        int arr[] = {1, 2, 3, 4, 5, 5, 4, 5, 2, 5};
-
-        int num = 5;
-
-        int ans = lastOccurence(arr, num);
-        System.out.println(ans);
-
+        if (args.length >= 3) {
+            int age = Integer.parseInt(args[2]);  // String -> int
+            System.out.println("Next year age: " + (age + 1));
+        }
     }
 }

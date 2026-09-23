@@ -8,7 +8,7 @@ Programming is the process of giving instructions to a computer so that it can d
 
 The computer cannot think on its own. It only follows instructions. We write those instructions. That act of writing instructions is called programming.
 
-Simple definition: programming means giving step-by-step instructions to a computer.
+#### Simple definition: programming means giving step-by-step instructions to a computer.
 
 ## What is a Program?
 
@@ -232,12 +232,7 @@ The main focus is on "what steps to perform".
 
 Example: C is a procedural language.
 
-Small example of procedural thinking:
 
-
-calculateArea(length, breadth)
-    return length * breadth
-```
 
 ## Object-Oriented Programming (OOP)
 
