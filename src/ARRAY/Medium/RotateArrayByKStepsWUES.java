@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class RotateArrayByKStepsWUES {
 
     //  Print Methode
-    public static void PrintArray(int[] arr){
+    public static void printArray(int[] arr){
        for(int i=0;i<arr.length;i++){
            System.out.print(arr[i]+" ");
        }
@@ -52,7 +52,7 @@ public class RotateArrayByKStepsWUES {
         int k = sc.nextInt();
 
         rotateArrayByKStepsWUES(arr, k);
-        PrintArray(arr);
+        printArray(arr);
 
     }
 }

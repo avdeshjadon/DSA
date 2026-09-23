@@ -66,3 +66,21 @@ TIME STAMPS-
 1:17:00 - Summary and next lecture
 1:18:19 - Thankyou
 https://www.youtube.com/watch?v=ODBaRTfZsDg
+
+
+TIME STAMPS:
+00:00 Introduction
+00:33 Recap of the last lecture
+02:39 Problems based on two pointers
+03:02 Sort an array consisting of only 0s and 1s
+06:13 Code
+10:34 Alternate approach
+21:06 Code
+23:28 Dry run
+27:02 In an array 'a' move all even integers at the beginning followed by all odd integers
+32:03 Code
+35:10 For an array 'a' sorted in non-decreasing order, return an array of squares of each number sorted in non-decreasing order
+46:20 Code
+51:20 Dry run
+1:00:12 Summary of lecture
+https://www.youtube.com/watch?v=FmXF2df9OVo&list=PLxgZQoSe9cg00xyG5gzb5BMkOClkch7Gr&index=22

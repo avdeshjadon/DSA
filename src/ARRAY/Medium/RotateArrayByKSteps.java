@@ -12,7 +12,7 @@ public class RotateArrayByKSteps {
         k = k % n;
 
         int j = 0;
-        int[] result = new int[n];
+        int[] result = new int[n]; // new array created so extra space is used in next question we will use better approach
 
         for (int i = n - k; i < n; i++) {
             result[j++] = array[i];
