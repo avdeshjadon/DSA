@@ -1,8 +1,8 @@
-package ARRAY.Medium;
+package ARRAY.Medium.TwoPointer;
 
 import ARRAY.Basics.ArrayBoilerplate;
 
-public class TwoPointerSortZeroAndOne {
+public class EvenOddPartition {
 
     // Swap Method
     public static void swap(int[] arr, int i, int j) {
@@ -18,22 +18,22 @@ public class TwoPointerSortZeroAndOne {
         }
     }
 
-    // Two Pointer Method
-    public static void twoPointerSortZero(int[] arr) {
+    public static void evenOddPartition(int[] arr) {
+
         int left = 0;
         int right = arr.length - 1;
 
         while (left < right) {
 
-            if (arr[left] == 0) {
-                left++;
-            }
-            else if (arr[right] == 1) {
-                right--;
-            }
-            else {
+            if (arr[left] % 2 != 0 && arr[right] % 2 == 0) {
                 swap(arr, left, right);
+            }
+
+            if (arr[left] % 2 == 0) {
                 left++;
+            }
+
+            if (arr[right] % 2 != 0) {
                 right--;
             }
         }
@@ -43,7 +43,7 @@ public class TwoPointerSortZeroAndOne {
 
         int[] arr = ArrayBoilerplate.inputArray();
 
-        twoPointerSortZero(arr);
+        evenOddPartition(arr);
 
         printArray(arr);
     }

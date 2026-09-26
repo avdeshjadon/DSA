@@ -84,3 +84,6 @@ TIME STAMPS:
 51:20 Dry run
 1:00:12 Summary of lecture
 https://www.youtube.com/watch?v=FmXF2df9OVo&list=PLxgZQoSe9cg00xyG5gzb5BMkOClkch7Gr&index=22
+
+
+dirrence between non decreasing and increasing array  1 1 2 3 4  and 1 2 2 3  like this

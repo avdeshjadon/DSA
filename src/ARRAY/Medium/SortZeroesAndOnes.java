@@ -1,3 +1,5 @@
+// ye two pointer approach ka base hai
+
 package ARRAY.Medium;
 
 import java.util.Scanner;
