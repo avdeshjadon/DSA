@@ -1,6 +1,6 @@
 // ye two pointer approach ka base hai
 
-package ARRAY.Medium;
+package ARRAY.Basics;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package ARRAY.Medium.TwoPointer;
+package ARRAY.TwoPointer;
 
 public class SquaresOfSortedArray {
 

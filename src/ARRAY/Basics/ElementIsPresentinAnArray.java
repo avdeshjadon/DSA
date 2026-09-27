@@ -1,6 +1,4 @@
-package ARRAY.Medium;
-
-import ARRAY.Basics.ArrayBoilerplate;
+package ARRAY.Basics;
 
 import java.util.Scanner;
 

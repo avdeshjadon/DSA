@@ -1,4 +1,4 @@
-package ARRAY.Medium.PrefixSum;
+package ARRAY.PrefixSum;
 
 import ARRAY.Basics.ArrayBoilerplate;
 

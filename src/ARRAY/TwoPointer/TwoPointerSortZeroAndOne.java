@@ -1,4 +1,4 @@
-package ARRAY.Medium.TwoPointer;
+package ARRAY.TwoPointer;
 
 import ARRAY.Basics.ArrayBoilerplate;
 
