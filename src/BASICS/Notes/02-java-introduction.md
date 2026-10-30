@@ -4,7 +4,7 @@
 
 Java is a general-purpose, object-oriented programming language.
 
-Simple definition: Java is a programming language used to build software that can run on many different devices without changing the code.
+#### Simple definition: Java is a programming language used to build software that can run on many different devices without changing the code.
 
 It was created by James Gosling at Sun Microsystems and released in 1995. Today it is one of the most popular languages in the world.
 
@@ -20,7 +20,7 @@ Java was designed so that:
 
 The main idea is expressed by one slogan:
 
-"Write once, run anywhere."
+>Write once, run anywhere [WORA]
 
 ## Write Once, Run Anywhere
 
@@ -49,21 +49,15 @@ The program is compiled once into bytecode. Every system has its own JVM that un
 
 ## Features of Java
 
-- Simple
-  Java removed many difficult features of older languages (like pointers in C).
-- Object-oriented
-  Java is built around classes and objects.
-- Platform independent
-  The same bytecode runs on different operating systems.
-- Secure
-  Java runs code in a controlled environment, which reduces danger.
-- Robust
-  Java handles errors well and has strong memory safety.
-- Portable
-  Programs can move between machines easily.
-- Multi-threaded
-  Java can do many tasks at the same time (advanced topic, not needed yet).
-
+| Feature | Description |
+| --- | --- |
+| Simple | Java removed many difficult features of older languages, such as pointers in C. |
+| Object-oriented | Java is built around classes and objects. |
+| Platform independent | The same bytecode can run on different operating systems using a compatible JVM. |
+| Secure | Java runs code in a controlled environment, which helps reduce security risks. |
+| Robust | Java handles errors well and provides strong memory safety. |
+| Portable | Java programs can move between different machines easily. |
+| Multi-threaded | Java can perform multiple tasks at the same time using threads. (Advanced topic, not needed yet.) |
 ## Where Java is Used
 
 - Android mobile apps
@@ -93,7 +87,7 @@ The program is compiled once into bytecode. Every system has its own JVM that un
 | Easy to read | Moderate | Very easy | Harder | Moderate |
 | Uses | Backend, Android, big data | Data science, scripting | Operating systems, systems | Websites, apps |
 
-No language is "best". Each is best for different work. Java is chosen here because it teaches OOP clearly, has strict rules that build discipline, and is widely used in industry.
+>No language is **best**. Each is best for different work. Java is chosen here because it teaches OOP clearly, has strict rules that build discipline, and is widely used in industry.
 
 ## The Journey of a Java Program
 
@@ -172,29 +166,4 @@ java Main
 
 The JVM loads the bytecode, converts it into machine instructions, and runs the program.
 
-## Important
-
-- The `.java` file is for humans to read and edit.
-- The `.class` file contains bytecode produced by the compiler.
-- Bytecode is the same on every system. This is why Java is platform independent.
-- The JVM is different on each system, but the bytecode is the same.
-
-## Common Interview Questions
-
-Q. What is Java?
-
-A. Java is an object-oriented programming language that runs on the JVM, which makes it platform independent.
-
-Q. What does "write once, run anywhere" mean?
-
-A. Java code is compiled into bytecode once. This bytecode runs on the JVM of any operating system, so no change is needed for different platforms.
-
-Q. What is bytecode?
-
-A. Bytecode is the intermediate result of Java compilation. It sits between source code and machine code and is executed by the JVM. Bytecode files have the `.class` extension.
-
-Q. Which files does javac produce?
-
-A. `javac` converts `.java` files into `.class` files containing bytecode.
-
-Next: Java Architecture - how the JVM, JRE and JDK work together.
+>The next file is [Java Architecture](03-java-architecture.md).

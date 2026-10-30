@@ -6,7 +6,7 @@ Output is the text that the program shows on the screen.
 
 In Java, we print output using `System.out`.
 
-## System.out.println()
+## System.out.println( )
 
 The `println` method prints the given text and then moves the cursor to the next line.
 
@@ -28,7 +28,7 @@ World
 
 Each `println` statement prints on a new line.
 
-## System.out.print()
+## System.out.print( )
 
 The `print` method prints the text but does NOT move to the next line.
 
@@ -51,10 +51,10 @@ Both strings appear on the same line because `print` never creates a new line.
 
 ## Difference Between print and println
 
-| print() | println() |
-| --- | --- |
-| Prints text and stays on the same line | Prints text and moves to the next line |
-| The next print starts right after the text | The next print starts on a fresh line |
+| print( )                                   | println( )                             |
+|--------------------------------------------|----------------------------------------|
+| Prints text and stays on the same line     | Prints text and moves to the next line |
+| The next print starts right after the text | The next print starts on a fresh line  |
 
 ```java
 System.out.print("A");
@@ -129,8 +129,6 @@ Output:
 Total = 53
 ```
 
-Why? Because Java reads left to right: `"Total = " + 5` becomes the text `"Total = 5"`, then `"Total = 5" + 3` becomes `"Total = 53"`. The numbers are joined as text, not added. This trick appears often in interviews. Mark as a common interview question.
-
 ## Escape Sequences
 
 An escape sequence is a special symbol that starts with backslash `\` and has a special meaning.
@@ -142,7 +140,7 @@ The two most used are:
 - `\"` - double quote inside text
 - `\\` - one backslash inside text
 
-### Example: \n
+### Example: \ n
 
 ```java
 System.out.println("Line1\nLine2");
@@ -155,9 +153,8 @@ Line1
 Line2
 ```
 
-The `\n` acts like pressing Enter.
 
-### Example: \t
+### Example: \ t
 
 ```java
 System.out.println("Name\tAge");
@@ -171,7 +168,7 @@ Name	Age
 Rahul	20
 ```
 
-### Example: printing a double quote
+### Example: printing a double quote ( \ " )
 
 ```java
 System.out.println("He said \"Hi\"");
@@ -185,7 +182,7 @@ He said "Hi"
 
 Without the backslash, the quote would break the text.
 
-### Example: printing a backslash
+### Example: printing a backslash ( \\\\ )
 
 ```java
 System.out.println("C:\\java\\code");
@@ -207,30 +204,31 @@ This prints one blank line.
 
 ## Common Mistakes
 
-- Forgetting quotes around text: `System.out.println(Hello);` is wrong. It should be `System.out.println("Hello");`.
-- Using single quotes for text: `System.out.println('Hello');` is wrong. Single quotes are only for single characters.
-- Expecting `print` to create a new line. It does not.
-- Adding `String + number` thinking it will always perform arithmetic.
+- **Forgetting double quotes around text:** Writing `System.out.println(Hello);` is incorrect because Java treats `Hello` as a variable name. Always use double quotes for text: `System.out.println("Hello");`.
 
+- **Using single quotes for strings:** Writing `System.out.println('Hello');` is incorrect because single quotes (`' '`) are used for a single character (`char`), not a String. Use double quotes (`" "`) for text.
+
+- **Confusing `print()` and `println()`:** `System.out.print()` displays output without moving to the next line, whereas `System.out.println()` automatically moves the cursor to a new line after printing.
+
+- **Confusing string concatenation with arithmetic:** When you use `+` with a String and a number, Java may perform string concatenation instead of addition. For example, `System.out.println("Age: " + 20);` prints `Age: 20`, not a mathematical calculation.
+
+- **Forgetting semicolons:** Every Java statement generally ends with a semicolon (`;`). For example, `System.out.println("Hello")` is incorrect because it is missing a semicolon.
+
+- **Case sensitivity mistakes:** Java is case-sensitive. For example, `System` and `system` are different, and `println` and `Println` are not the same.
+
+- **Mismatched parentheses and quotation marks:** Always close parentheses, double quotes, and other delimiters correctly. For example, `System.out.println("Hello);` is incorrect because the closing double quote is missing.
+
+> **Remember:** Pay attention to quotation marks, semicolons, capitalization, and parentheses while writing Java code. Most beginner-level syntax errors happen because of these small mistakes.
 ## Important Points
 
-- `println` moves to a new line, `print` does not.
-- Numbers inside `println` do not need quotes.
-- Text must be inside double quotes.
-- Escape sequences always start with `\`.
+- **`println()` vs `print()`:** `println()` prints the output and moves the cursor to the next line, whereas `print()` displays the output on the same line.
 
-## Common Interview Questions
+- **Numbers Without Quotes:** Numeric values can be printed directly without double quotes. For example, `System.out.println(100);`.
 
-Q. What is the difference between print and println?
+- **Text Inside Double Quotes:** Text (String values) must always be enclosed in double quotes (`" "`). For example, `System.out.println("Hello");`.
 
-A. print prints without a new line; println prints and then moves the cursor to the next line.
+- **Escape Sequences:** Escape sequences always start with a backslash (`\`) and are used to represent special characters such as new lines (`\n`), tabs (`\t`), and quotation marks (`\"`).
 
-Q. What is the output of System.out.println("Total = " + 5 + 3)?
+> **Remember:** Use double quotes for text, no quotes for numbers, `println()` for a new line, and `\` for escape sequences.
 
-A. `Total = 53`. Text joins the numbers as a string. To add them, use brackets: `"Total = " + (5 + 3)`.
-
-Q. How do you print a double quote inside a string?
-
-A. Use the escape sequence `\"`.
-
-Next: Variables and identifiers - how to store data.
+>The next file is [Java Variables & Identifiers](06-variables-identifiers.md)

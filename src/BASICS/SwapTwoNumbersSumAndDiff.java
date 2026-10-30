@@ -7,6 +7,7 @@ public class SwapTwoNumbersSumAndDiff {
         int number_2 = 20;
 
         number_1 = number_1 + number_2;
+
         number_2 = number_1 - number_2;
         number_1 = number_1 - number_2;
 

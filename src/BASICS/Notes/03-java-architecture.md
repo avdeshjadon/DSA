@@ -1,44 +1,48 @@
- # Java Architecture: JVM, JRE, JDK
+ # Java Architecture: JVM , JRE & JDK
 
 This file explains the three most important pieces of Java in simple language. These three names confuse almost every beginner, so read slowly.
 
 ## The Three Pieces
 
 ```text
-╔════════════════════════════════╗
-║        THE THREE PIECES        ║
-╠════════════════════════════════╣
-║ ┌────────────────────────────┐ ║
-║ │   JDK - Development Kit    │ ║
-║ └────────────────────────────┘ ║
-║               ▼                ║
-║ ┌────────────────────────────┐ ║
-║ │ JRE - Runtime Environment  │ ║
-║ └────────────────────────────┘ ║
-║               ▼                ║
-║ ┌────────────────────────────┐ ║
-║ │   JVM - Virtual Machine    │ ║
-║ └────────────────────────────┘ ║
-╚════════════════════════════════╝
+╔══════════════════════════════════════════════════════════════╗
+║                  JDK (Java Development Kit)                  ║
+║                                                              ║
+║  ╔════════════════════════════════════════════════════════╗  ║
+║  ║              JRE (Java Runtime Environment)            ║  ║
+║  ║                                                        ║  ║
+║  ║  ╔══════════════════════════════════════════════════╗  ║  ║
+║  ║  ║            JVM (Java Virtual Machine)            ║  ║  ║
+║  ║  ║                                                  ║  ║  ║
+║  ║  ║  ┌────────────────────┐ ┌─────────────────────┐  ║  ║  ║
+║  ║  ║  │   Class Loader     │ │  Bytecode Verifier  │  ║  ║  ║
+║  ║  ║  └────────────────────┘ └─────────────────────┘  ║  ║  ║
+║  ║  ║                                                  ║  ║  ║
+║  ║  ║  ┌────────────────────┐ ┌─────────────────────┐  ║  ║  ║
+║  ║  ║  │   Memory Areas     │ │   Execution Engine  │  ║  ║  ║
+║  ║  ║  └────────────────────┘ └─────────────────────┘  ║  ║  ║
+║  ║  ╚══════════════════════════════════════════════════╝  ║  ║
+║  ║                                                        ║  ║
+║  ║                    Runtime Libraries                   ║  ║
+║  ╚════════════════════════════════════════════════════════╝  ║
+║                                                              ║
+║                      Development Tools                       ║
+║                  javac  |  javadoc  |  jdb                   ║
+╚══════════════════════════════════════════════════════════════╝
 ```
 
-Rules to remember:
-
-- JDK contains JRE.
-- JRE contains JVM.
-- So JDK is the biggest, JRE is in the middle, JVM is the smallest.
 
 ## JVM - Java Virtual Machine
 
 What it is: JVM is the machine that actually runs Java bytecode.
 
-Simple definition: the JVM is a software "machine" that converts bytecode into machine instructions and runs your program.
+#### Simple definition: the JVM is a software that converts bytecode into machine instructions and runs your program.
 
 Key facts:
 
 - Each operating system has its own JVM.
 - The same bytecode runs on different JVMs. This is what makes Java platform independent.
-- The JVM also manages memory and cleans up unused objects (done by a part called the Garbage Collector).
+- The JVM also manages memory and cleans up unused objects (done by a part called the **Garbage Collector**).
 
 ```text
 ╔════════════════════════════╗
@@ -62,13 +66,13 @@ Key facts:
 ╚════════════════════════════╝
 ```
 
-The JVM is not a physical machine. It is software that pretends to be a machine.
+>The JVM is not a physical machine. It is software that pretends to be a machine.
 
 ## JRE - Java Runtime Environment
 
 What it is: JRE is everything needed to run a Java program.
 
-Simple definition: the JRE is the environment that provides the JVM plus the basic libraries Java programs need to run.
+#### Simple definition: the JRE is the environment that provides the JVM plus the basic libraries Java programs need to run.
 
 JRE = JVM + core libraries (like the code for printing, reading, and math operations).
 
@@ -81,7 +85,7 @@ Key facts:
 
 What it is: JDK is everything needed to develop and run Java programs.
 
-Simple definition: the JDK is the full toolkit for Java developers. It includes tools to write, compile, and run Java programs.
+#### Simple definition: the JDK is the full toolkit for Java developers. It includes tools to write, compile, and run Java programs.
 
 JDK = JRE + development tools.
 
@@ -121,7 +125,7 @@ JRE  =  JVM  +  core libraries
 JDK  =  JVM  +  core libraries  +  development tools
 ```
 
-## What Each One Does (Simple Table)
+## What Each One Does 
 
 | Name | Full form | What it does | Do you need it to write code? |
 | --- | --- | --- | --- |
@@ -163,8 +167,6 @@ JDK  =  JVM  +  core libraries  +  development tools
 
 ## Is Java Compiled or Interpreted?
 
-The Programming Fundamentals file said: "C, C++, Java (Java uses a mix, explained in the Java architecture file)." Here is that explanation.
-
 Everyone asks this question, and the answer is: **Java is both compiled AND interpreted.** It is a hybrid. Here is the three-stage story.
 
 ```text
@@ -172,11 +174,11 @@ Everyone asks this question, and the answer is: **Java is both compiled AND inte
 ║              JAVA - THE TWO-STEP JOURNEY                          ║
 ╠═══════════════════════════════════════════════════════════════════╣
 ║                                                                   ║
-║  STEP 1 - COMPILED                                               ║
+║  STEP 1 - COMPILED                                                ║
 ║  ┌────────────────────────────────────────────────────┐           ║
-║  │ You write Hello.java                                │           ║
+║  │ You write Hello.java                               │           ║
 ║  └────────────────────────────────────────────────────┘           ║
-║                          ▼                            (once)      ║
+║                          ▼                       (once)           ║
 ║  ┌────────────────────────────────────────────────────┐           ║
 ║  │ javac compiles the WHOLE file at once              │           ║
 ║  └────────────────────────────────────────────────────┘           ║
@@ -185,21 +187,21 @@ Everyone asks this question, and the answer is: **Java is both compiled AND inte
 ║  │ Bytecode Hello.class (not machine code!)           │           ║
 ║  └────────────────────────────────────────────────────┘           ║
 ║                                                                   ║
-║  STEP 2 - INTERPRETED BY THE JVM                                 ║
+║  STEP 2 - INTERPRETED BY THE JVM                                  ║
 ║  ┌────────────────────────────────────────────────────┐           ║
 ║  │ Every system's JVM reads the bytecode              │           ║
-║  │ and converts it to machine instructions             │           ║
-║  │ (line by line, at run time)                         │           ║
+║  │ and converts it to machine instructions            │           ║
+║  │ (line by line, at run time)                        │           ║
 ║  └────────────────────────────────────────────────────┘           ║
 ║                          ▼                                        ║
 ║  ┌────────────────────────────────────────────────────┐           ║
-║  │ Program output                                    │           ║
+║  │ Program output                                     │           ║
 ║  └────────────────────────────────────────────────────┘           ║
 ║                                                                   ║
 ╚═══════════════════════════════════════════════════════════════════╝
 ```
 
-### Why it is a "mix"
+### Why Java is a Hybrid or Mix Language
 
 | Question | Answer |
 | --- | --- |
@@ -237,38 +239,27 @@ and then the JIT compiler improves hot code into machine code (compiled again, a
 
 ### Easy interview explanation
 
-If an interviewer asks "Is Java compiled or interpreted?", say this:
+- #### If an interviewer asks "Is Java compiled or interpreted?", say this:
 
-"Java is both. First `javac` compiles the whole source file into bytecode, which is a .class file. Then the JVM interprets that bytecode and turns it into machine instructions at run time. To make it faster, a part of the JVM called the JIT compiler compiles the frequently used parts of bytecode into native machine code while the program is running. So Java starts as compiled, runs as interpreted, and finishes with JIT compilation."
+Java is both. First `javac` compiles the whole source file into bytecode, which is a .class file. Then the JVM interprets that bytecode and turns it into machine instructions at run time. To make it faster, a part of the JVM called the JIT compiler compiles the frequently used parts of bytecode into native machine code while the program is running. So Java starts as compiled, runs as interpreted, and finishes with JIT compilation.
 
-Keep it as three short sentences: compiled to bytecode, interpreted by the JVM, then JIT speeds it up.
+>Keep it as three short sentences: compiled to bytecode, interpreted by the JVM, then JIT speeds it up.
 
-## Easy Interview Explanation
 
-If an interviewer asks "Explain JVM, JRE and JDK", say this:
+- #### If an interviewer asks "Explain JVM, JRE and JDK", say this:
 
-"Java source code is compiled by the Java compiler into bytecode. This bytecode runs on the JVM, which is a virtual machine that converts bytecode into machine instructions. The JRE is the JVM plus the libraries needed to run Java programs. The JDK is the JRE plus development tools like the compiler. So the JDK is the biggest, it contains the JRE, and the JRE contains the JVM."
+Java source code is compiled by the Java compiler into bytecode. This bytecode runs on the JVM, which is a virtual machine that converts bytecode into machine instructions. The JRE is the JVM plus the libraries needed to run Java programs. The JDK is the JRE plus development tools like the compiler. So the JDK is the biggest, it contains the JRE, and the JRE contains the JVM.
 
-Keep this short and natural. Do not memorize a long paragraph.
+>Keep this short and natural. Do not memorize a long paragraph.
 
-## Important
+## Important Points
 
-- One file, can you compile without JRE? No, javac comes with the JDK.
-- One file, can you run without JDK? Yes, if the JRE is installed.
-- The JVM is different for each operating system, but Java code stays the same everywhere.
+- **Can you compile Java code without JRE?** Yes. The Java compiler (`javac`) is included in the JDK, so you can compile Java programs without installing a separate JRE.
 
-## Common Interview Questions
+- **Can you run Java code without JDK?** Yes. You only need a compatible Java runtime environment to execute an already compiled Java program. A full JDK is not required.
 
-Q. Why is Java called platform independent?
+- **Is JVM different for each operating system?** Yes. Different operating systems have their own compatible JVM implementations, but Java bytecode remains the same across platforms. This allows Java programs to run on Windows, macOS, and Linux without changing the source code or bytecode.
+> **JDK** is used to develop and compile Java programs, **JRE** provides the runtime environment, and **JVM** executes Java bytecode.
+of a Java program.
 
-A. Because Java compiles to bytecode, which does not depend on any operating system. Any system that has a JVM can run the same bytecode.
-
-Q. What is the difference between JDK, JRE and JVM?
-
-A. JVM runs bytecode. JRE = JVM + libraries needed for running programs. JDK = JRE + development tools like the compiler.
-
-Q. What is inside the JDK?
-
-A. The JDK contains the JRE, the JVM, the compiler `javac`, the runtime `java`, and other development tools.
-
-Next: Java syntax - the structure of a Java program.
+>The next file is [Java Syntax](04-java-syntax.md)

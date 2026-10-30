@@ -87,3 +87,63 @@ https://www.youtube.com/watch?v=FmXF2df9OVo&list=PLxgZQoSe9cg00xyG5gzb5BMkOClkch
 
 
 dirrence between non decreasing and increasing array  1 1 2 3 4  and 1 2 2 3  like this
+
+
+TIME STAMPS:
+00:00 - Introduction
+00:38 - Recap
+02:14 - Given an integer array 'a', return the prefix sum/running sum in the same array.
+09:07  - Code
+19:33 - For a given array of integers of size n, answer q queries to print the sum of values in a given range of indices from l to r
+33:51 - Code
+35:52 - Program to check if an array can be partitioned into sub-arrays with equal sum
+49:00 - Code
+54:42 - Dry run
+56:46 - Summary
+57:44 - Follow-up question
+https://www.youtube.com/watch?v=5_DFKL4zYLc&list=PLxgZQoSe9cg00xyG5gzb5BMkOClkch7Gr&index=23
+
+Timestamps:-
+00:00 = Overview of the class.
+00:59 = Recap
+02:50 = Introduction to 2D Array
+08:44 = Introduction to 3D Array
+13:36 = Representation of 2D Array
+20:33 = Methods to initialize 2D Array
+23:20 = 2D Array initialization code
+29:37 = Taking 2D Array User Input
+34:18 = Taking 2D Array User Input Dry Run
+39:54 = Why Multidimensional Arrays
+42:23 = Problem 01 : Addition of 2 Matrices
+44:54 = Problem 01 : Addition of 2 Matrices Code
+52:21 = Problem 02 : Multiplication of 2 Matrices
+01:04:00 = Problem 02 : Multiplication of 2 Matrices Code
+01:17:39 = Problem 02 : Multiplication of 2 Matrices Dry Run
+01:27:45 = Summary
+01:28:37 = About Next lecture
+01:25:48 = Follow up Question
+
+https://www.youtube.com/watch?v=lhgH-Ehmlk4&list=PLxgZQoSe9cg00xyG5gzb5BMkOClkch7Gr&index=24
+
+Timestamps
+00:00 = Intro
+00:37 = Recap
+03:38 = Today's checklist
+04:02 = Problem 01 : Transpose of matrix
+08:03 = Problem 01 : Transpose of matrix code
+13:00 = Problem 01 : Transpose of matrix dry run
+18:00 = Problem 02 : Transpose of matrix inplace
+20:14 = Problem 02 : Transpose of matrix inplace - Testing swap code
+22:30 = Problem 02 : Transpose of matrix inplace logic
+30:51 = Problem 02 : Transpose of matrix inplace - final code
+31:50 = Non-square matrix condition
+32:45 = Problem 02 : Transpose of matrix inplace dry run
+34:49 = Problem 03 : Rotate a matrix 90 degrees clockwise
+38:50 = Problem 03 : Rotate a matrix 90 degrees clockwise code
+45:34 = Problem 04 : Return n rows of Pascal's triangle
+52:13 = Problem 04 : Return n rows of Pascal's triangle code
+59:15 = Problem 04 : Return n rows of Pascal's triangle dry run
+01:05:00 = Summary
+01:07:26 = About next lecture
+
+https://www.youtube.com/watch?v=_4QAUfXERsU&list=PLxgZQoSe9cg00xyG5gzb5BMkOClkch7Gr&index=25

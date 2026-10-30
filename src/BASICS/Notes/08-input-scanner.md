@@ -4,7 +4,7 @@
 
 Scanner is a built-in Java class used to read input from the user.
 
-Simple definition: Scanner reads values typed by the user on the keyboard.
+#### Simple definition: Scanner reads values typed by the user on the keyboard.
 
 Scanner lives inside the package `java.util`, so we must import it at the top of the file.
 
@@ -73,7 +73,7 @@ char ch = sc.next().charAt(0);
 
 Example: user types "Apple". `next()` returns "Apple". `charAt(0)` returns 'A'.
 
-## next() vs nextLine()
+## next( ) vs nextLine( )
 
 - `next()` reads characters until it finds a space or new line. Good for single words.
 - `nextLine()` reads the whole line including spaces.
@@ -84,9 +84,9 @@ String name = sc.nextLine();
 System.out.println("Name: " + name);
 ```
 
-If the user types `Aman Kumar`, `nextLine()` gives `"Aman Kumar"` and `next()` gives only `"Aman"`.
+If the user types `Avdesh Jadon`, `nextLine()` gives `"Avdesh Jadon"` and `next()` gives only `"Avdesh"`.
 
-## Very Important: The nextInt() and nextLine() Problem
+## Very Important: The nextInt( ) and nextLine( ) Problem
 
 This causes a very common bug. Beginners get confused every time.
 
@@ -162,30 +162,24 @@ The user can type them spaced out or one per line; Scanner reads them in order.
 
 ## Common Mistakes
 
-- Forgetting the import: `import java.util.Scanner;`
-- Forgetting to close the scanner: `sc.close();` (good practice, though not always required).
-- Using the leftover-Enter pattern incorrectly, as shown above.
-- Calling nextLine() when a number input is expected.
+- **Forgetting the Import Statement:** Using `Scanner` without importing `java.util.Scanner;` causes a compilation error.
+
+- **Not Closing the Scanner:** Forgetting `sc.close();` can leave the input resource open. Closing it is generally good practice when the scanner is no longer needed.
+
+- **Ignoring the Leftover Newline:** Methods like `nextInt()` and `nextDouble()` leave the newline character in the input buffer. Calling `nextLine()` immediately afterward may read that leftover newline instead of the expected input.
+
+- **Using `nextLine()` Instead of `nextInt()`:** If you need an integer value, use `nextInt()` rather than `nextLine()`, which reads the entire line as a String.
 
 ## Important Points
 
-- Scanner must be imported from java.util.
-- nextInt, nextDouble, nextBoolean read one value of that type.
-- next() reads one word, nextLine() reads the whole line.
-- Read a character with sc.next().charAt(0).
+- **Scanner Import:** The `Scanner` class belongs to the `java.util` package, so you must import it before using it.
 
-## Common Interview Questions
+- **Reading Different Data Types:** `nextInt()`, `nextDouble()`, and `nextBoolean()` read input as integers, decimal numbers, and boolean values respectively.
 
-Q. How do you read a character with Scanner?
+- **`next()` vs `nextLine()`:** `next()` reads a single word until whitespace, whereas `nextLine()` reads the entire line, including spaces.
 
-A. Scanner has no nextChar method. Use `sc.next().charAt(0)`.
+- **Reading a Character:** Scanner does not have a direct `nextChar()` method. Use `sc.next().charAt(0)` to read the first character of the entered word.
 
-Q. What is the difference between next() and nextLine()?
-
-A. next() reads a single word up to the first space. nextLine() reads the entire line including spaces.
-
-Q. Why is nextLine() after nextInt() a problem?
-
-A. nextInt() leaves the Enter key in the scanner. nextLine() reads that leftover Enter and returns an empty line. Fix by adding an extra nextLine() after the number.
-
-Next: Operators - the symbols that perform calculations.
+- **Closing Scanner:** Use `sc.close()` when you have finished reading input and no longer need the scanner.
+- the symbols that perform calculations.
+>The next file is [Java Operators](09-operators.md)

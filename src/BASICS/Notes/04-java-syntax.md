@@ -1,4 +1,4 @@
-# Java Basic Syntax
+# Java Syntax
 
 ## Java Program Structure
 
@@ -42,7 +42,7 @@ The structure has three big parts:
 
 A class is a container for code and data in Java.
 
-Simple definition: a class is a blueprint that groups related data and behavior together.
+#### Simple definition: a class is a blueprint that groups related data and behavior together.
 
 In the example, `Main` is the class name. The rule for the class name is that it should match the filename. If the file is `Main.java`, the class must be `Main`.
 
@@ -82,20 +82,18 @@ java Main Alice Bob
 
 then inside the program, `args[0]` is `"Alice"` and `args[1]` is `"Bob"`.
 
-Full meaning of parameters and arguments is explained in the Scope and Parameters file.
+## What Each Word Means
 
-## What Each Word Is Made Of
-
-- String - a data type that holds text.
-- [] - means an array, which is a list of items.
-- args - short for arguments, the name of the list.
-- String[] args - a list of text arguments passed to the program.
+- **String** - A data type used to store text, such as names, messages, or sentences.
+- **[  ]** - Represent an array, which is a collection of multiple values of the same data type.
+- **args** - Short for arguments. It is the variable name used to store the arguments passed to the program.
+- **String[  ] args** - An array of strings that stores command-line arguments passed to the Java program when it starts.
 
 ## Why Do These Letters Appear Together?
 
 The main method must have this exact form so the JVM can find it automatically. If only one word is changed (for example `main` becomes `Main`), the JVM will not find it and the program will not run.
 
-## System.out.println()
+## System.out.println( )
 
 Inside the main method, the program usually prints something.
 
@@ -109,7 +107,7 @@ System.out.println("Hello World");
 | out | A special object inside System that represents the output screen. |
 | println | A method that prints a line of text and moves to the next line. |
 
-Full detail about output is in the Output file.
+Full detail about output is in the [Output file](05-output.md).
 
 ## Example: Complete Program
 
@@ -141,21 +139,7 @@ I am learning Java
 
 - The filename and the public class name must match.
 - Statements inside a method end with a semicolon `;`.
-- Code blocks open and close with curly braces `{}`.
+- Code blocks open and close with curly braces `{ }`.
 - Java is case sensitive. `main` and `Main` are different things.
 
-## Common Interview Questions
-
-Q. Why is main public static void?
-
-A. public - so the JVM can call it. static - so it can be called without creating an object. void - so it returns nothing.
-
-Q. What is String[] args?
-
-A. It is an array of Strings that holds command-line arguments passed to the program.
-
-Q. Can a Java program run without main?
-
-A. A normal program cannot. In some advanced cases small blocks of code can run, but the main method is required for a normal standalone program.
-
-Next: Output - how to print text with Java.
+>The next file is [Java output](05-output.md)

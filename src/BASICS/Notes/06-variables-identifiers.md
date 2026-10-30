@@ -4,7 +4,7 @@
 
 A variable is a named box in the computer's memory that stores a value.
 
-Simple definition: a variable is a name we give to a value so we can use it again later.
+#### Simple definition: a variable is a name we give to a value so we can use it again later.
 
 ```text
 ╔════════════════════════════╗
@@ -41,8 +41,8 @@ int age;
 
 Here:
 
-- `int` is the type (a whole number).
-- `age` is the name.
+- `int` is the type ( a whole number ).
+- `age` is the name ( variable name ).
 - `;` ends the statement.
 
 ## Initialization
@@ -80,7 +80,7 @@ A variable is used by writing its name.
 
 ```java
 int age = 20;
-System.out.println(age);   // prints 20
+System.out.println(age);      // prints 20
 System.out.println(age + 5);  // prints 25
 ```
 
@@ -88,7 +88,7 @@ System.out.println(age + 5);  // prints 25
 
 ```java
 int number = 10;
-number = number + 5;   // new value = old value + 5
+number = number + 5;          // new value = old value + 5
 System.out.println(number);   // prints 15
 ```
 
@@ -106,6 +106,24 @@ Rules for identifiers in Java:
 4. Cannot contain spaces.
 5. Cannot contain special symbols like `-`, `.`, `*`, etc. (underscore and dollar sign are allowed).
 6. Cannot be a keyword (reserved words like `int`, `class`, `public`).
+
+#### Complete List of Java Keywords
+
+| Keyword | Keyword | Keyword | Keyword |
+| --- | --- | --- | --- |
+| `abstract` | `assert` | `boolean` | `break` |
+| `byte` | `case` | `catch` | `char` |
+| `class` | `const` | `continue` | `default` |
+| `do` | `double` | `else` | `enum` |
+| `extends` | `final` | `finally` | `float` |
+| `for` | `goto` | `if` | `implements` |
+| `import` | `instanceof` | `int` | `interface` |
+| `long` | `native` | `new` | `package` |
+| `private` | `protected` | `public` | `return` |
+| `short` | `static` | `strictfp` | `super` |
+| `switch` | `synchronized` | `this` | `throw` |
+| `throws` | `transient` | `try` | `void` |
+| `volatile` | `while` | `_` | |
 
 Valid names:
 
@@ -126,46 +144,40 @@ Invalid names and reasons:
 | student name | Contains a space |
 | student-name | Contains a symbol `-` |
 | int | It is a keyword |
-
 ## Naming Conventions
 
-A convention is a habit that all programmers agree to follow. Java does not force all of them, but it is best practice.
+A convention is a habit or standard that programmers agree to follow. Java does not force all naming conventions, but following them makes code easier to read, understand, and maintain.
 
 | Thing | Convention | Example |
 | --- | --- | --- |
-| Variable | Starts with a lowercase letter. Multiple words written like this: camelCase | studentName |
-| Class | Starts with an uppercase letter. Multiple words start each with uppercase: PascalCase | StudentRecord |
-| Method | Starts with a lowercase letter, camelCase | calculateMarks |
-| Constants | All uppercase with underscores | MAX_LIMIT |
+| Variable | Starts with a lowercase letter. Multiple words use camelCase. | `studentName`, `totalMarks` |
+| Class | Starts with an uppercase letter. Each word starts with an uppercase letter (PascalCase). | `StudentRecord`, `BankAccount`, `EmployeeDetails` |
+| Method | Starts with a lowercase letter. Multiple words use camelCase. | `calculateMarks`, `getStudentName` |
+| Constants | All uppercase letters with underscores between words. | `MAX_LIMIT`, `MIN_VALUE`, `PI_VALUE` |
 
-camelCase example: `studentName`, `totalMarks`, `isEven`.
+**camelCase Examples:** `studentName`, `totalMarks`, `isEven`, `calculateSalary`.
 
+**PascalCase Examples:** `StudentRecord`, `BankAccount`, `EmployeeDetails`, `StudentManagementSystem`.
 ## Common Mistakes
 
-- Declaring a variable twice with the same name.
-- Forgetting to initialize a local variable before using it. Java gives an error: variable might not have been initialized.
-- Using a keyword as a variable name.
-- Using spaces or special symbols in names.
+- **Declaring a variable more than once:** Java does not allow you to declare two local variables with the same name in the same scope.
+
+- **Using an uninitialized local variable:** Local variables must be assigned a value before they are used. Otherwise, Java reports an error: `variable might not have been initialized`.
+
+- **Using reserved keywords as variable names:** Keywords such as `int`, `class`, and `public` cannot be used as variable names.
+
+- **Using invalid characters in variable names:** Variable names cannot contain spaces or unsupported special characters. For example, `student name` and `total-marks` are invalid.
 
 ## Important Points
 
-- A variable must be declared before it is used.
-- Type is written once at declaration.
-- The `=` symbol assigns a value. Compare it with `==` (equals to) explained in the conditionals file.
-- Variable names are case sensitive. `age` and `Age` are different variables.
+- **Declaration Before Use:** A variable must be declared before it can be used in the program.
 
-## Common Interview Questions
+- **Data Type:** Every variable must have a data type, such as `int`, `double`, `char`, or `String`, when it is declared.
 
-Q. What is the difference between declaration, initialization and assignment?
+- **Assignment Operator (`=`):** The `=` symbol is used to assign a value to a variable. It is different from `==`, which is used to compare two values (explained in the Conditionals file).
 
-A. Declaration creates the variable with a type. Initialization gives it the first value. Assignment gives or changes a value any time.
+- **Case Sensitivity:** Java is case-sensitive, so `age`, `Age`, and `AGE` are treated as three different variable names.
 
-Q. Can we declare two variables with the same name in one method?
+- **Initialization:** Initializing a variable means assigning its first value. For example, `int age = 20;` declares and initializes the variable in one statement.rent kinds of values.
 
-A. No. Java does not allow two variables with the same name in the same scope.
-
-Q. What are valid ways to start an identifier in Java?
-
-A. A letter, an underscore `_`, or a dollar sign `$`. Not a digit.
-
-Next: Data types - the different kinds of values.
+>The next file is [Java Data-types](07-data-types.md)
